@@ -1,0 +1,59 @@
+@use "_colors.scss" as *;
+
+*,
+*::before,
+*::after { /* Afecta a todos los elementos del documento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", century-gothic, sans-serif;
+    color: $font;
+}
+::selection {
+    background: $selection-bg;
+}
+::-webkit-scrollbar {
+    width: .5rem;
+
+    &-track {
+        background-color: $scrollbar-bg;
+        margin-block: .2rem;
+    }
+    
+    &-thumb {
+        background-color: $scrollbar-thumb-bg;
+        
+        border-radius: .5rem;
+        &:hover {
+            background-color: $scrollbar-thumb-bg-hover;
+        }
+    }
+}
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+        transition-delay: 0ms !important;
+    }
+}
