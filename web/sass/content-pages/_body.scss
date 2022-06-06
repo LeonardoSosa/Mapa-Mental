@@ -1,0 +1,9 @@
+@use "../_colors.scss" as *;
+
+body {
+    background-color: $body;
+}
+
+.main {
+    min-height: 100vh;
+}

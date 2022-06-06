@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - JSON</title>
+
+    <!-- Meta tags -->
+    <meta name="theme-color" content="#282829">
+
+    <!-- Css / Javascript -->
+    <link rel="stylesheet" href="../sass/css/content_pages.css">
+    <script src="../js/main.js" defer></script>
+
+    <!-- Source Code Pro Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main class="main" id="main">
+        <a class="to-top" href="#main"><ion-icon name="arrow-up-outline"></ion-icon></a>
+        <div class="main__content">
+
+            <section class="section" id="caracteristicas">
+                <h2 class="section__title section__title--underline">Características</h2>
+                <p>
+                    Los achivos JSON (Javascript Object Notation) tienen un formato que permite el intercambio de información ligero, además están pensados para que un humano pueda leer y escribir la información fácilmente.
+                </p>
+                <p>
+                    A pesar de su nombre, los archivos JSON pueden ser manipulados por la mayoría de lenguajes, teniendo soporte nativo o através de librerías. Algunos ejemplos son : C, C++, C#, Java, JavaScript, Perl, Python, PHP, Go, etc.
+                </p>
+            </section>
+
+            <section class="section" id="tipos-de-datos">
+                <h2 class="section__title section__title--underline">Tipos de datos</h2>
+                <ul>
+                    <li>number</li>
+                    <li>string</li>
+                    <li>boolean</li>
+                    <li>object</li>
+                    <li>array</li>
+                    <li>null</li>
+                </ul>
+            </section>
+
+            <section class="section" id="sintaxis">
+                <h2 class="section__title">Sintaxis</h2>
+                <div class="table">
+                    <div class="table__row">
+                        <p><strong>{ }</strong></p>
+                        <p>para definir <strong>objetos</strong></p>
+                    </div>
+                    <div class="table__row">
+                        <p><strong>[ ]</strong></p>
+                        <p>para definir <strong>arrays</strong></p>
+                    </div>
+                    <div class="table__row">
+                        <p><strong>" "</strong></p>
+                        <p>para definir una <strong>key</strong> (obligatorio)</p>
+                    </div>
+                    <div class="table__row">
+                        <p><strong>:</strong></p>
+                        <p>para <strong>separar</strong> una key de un value</p>
+                    </div>
+                    <div class="table__row">
+                        <p><strong>,</strong></p>
+                        <p>para <strong>separar</strong> datos u objetos</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="ejemplos">
+                <h2 class="section__title">Ejemplos</h2>
+                <pre class="code-block">
+                    <code class="code-block__text">
+{
+    "name": "eugenia",
+    "password": "12345678",
+    "adress": 
+    {
+        "city": "London",
+        "street": "Baker Street 123"
+    },
+    "hobbies": ["run", "code", "eat"],
+    "age": 27
+}
+    <hr>
+[
+    {
+        "name": "Juance",
+        "id": 123
+    },
+    {
+        "name": "Ernesto",
+        "id": 420
+    }
+]                   </code>
+                </pre>
+            </section>
+
+            <section class="section" id="observaciones">
+                <h2 class="section__title section__title--underline">Observaciones</h2>
+                <ul>
+                    <li><strong>application/json</strong> - Mime Type</li>
+                    <li><strong>.json</strong> - Extensión de archivo</li>
+                    <li>Usado en Javascript con AJAX</li>
+                </ul>
+            </section>
+
+            <section class="section" id="utiles">
+                <h2 class="section__title section__title--underline">Útiles</h2>
+                <p><a target="_blank" href="https://www.jsonlint.com">www.jsonlint.com</a> - Comprobar validez archivos JSON</p>
+                <p>JSON.stringify( ) - Método que convierte un objeto Javascript a string JSON</p>
+                <p>JSON.parse( ) - Método que convierte un string JSON a objeto Javascript</p>
+                <p>fetch( ) - Método para hacer resquests de archivos JSON locales o de una api</p>
+            </section>
+
+        </div>
+    </div>
+
+    <aside class="main__navigation">
+        <nav class="navigation">
+
+            <h3 class="navigation__title">Temas</h3>
+            <div class="navigation__items">
+                <!-- Each page/theme/topic has to be here -->
+                <a class="a--font-muted" href="../index.html">Home</a>
+                <a class="a--font-muted">Specificity</a>
+                <a class="a--font-muted">BEM</a>
+                <a class="a--font-muted">Flex shorthand</a>
+                <a class="a--font-muted">DOM selector methods</a>
+                <a class="a--font-muted">Callbacks</a>
+                <a class="a--font-muted">Var | const | let</a>
+                <a class="a--font-muted">\r | \n | \r\n</a>
+                <a class="a--font-muted">JSON</a>
+                <a class="a--font-muted">Markdown</a>
+                <a class="a--font-muted">Regex</a>
+                <a class="a--font-muted">Example</a>
+            </div>
+
+        </nav>
+    </aside>
+
+    <aside class="main__sidebar">
+        <nav class="sidebar">
+
+            <h3>Sumario</h3>
+            <div class="sidebar__items">
+                <a class="a--font-muted" href="#caracteristicas">Características</a>
+                <a class="a--font-muted" href="#tipos-de-datos">Tipos de datos</a>
+                <a class="a--font-muted" href="#sintaxis">Sintaxis</a>
+                <a class="a--font-muted" href="#ejemplos">Ejemplos</a>
+                <a class="a--font-muted" href="#observaciones">Observaciones</a>
+                <a class="a--font-muted" href="#utiles">Útiles</a>
+            </div>
+
+        </nav>
+    </aside>
+    
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

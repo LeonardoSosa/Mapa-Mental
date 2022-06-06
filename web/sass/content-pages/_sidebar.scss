@@ -1,8 +1,11 @@
-@use "_colors.scss" as *;
+@use "../_colors.scss" as *;
 
 .main__sidebar {
-    padding: 2rem;
+    display: none;
+
     max-height: 100vh;
+    padding: 2rem 1.5rem;
+    padding-left: 0;
     
     position: sticky;
     top: 0;
@@ -19,12 +22,12 @@
         flex-direction: column;
 
         & a {
-            padding: 0.5rem 0;
+            padding: .5rem 0;
             padding-left: 1rem;
 
             border-left: 2px solid $sidebar-border;
-            border-top-right-radius: 0.5rem;
-            border-bottom-right-radius: 0.5rem;
+            border-top-right-radius: .3rem;
+            border-bottom-right-radius: .3rem;
         }
 
         & [aria-current="true"] {

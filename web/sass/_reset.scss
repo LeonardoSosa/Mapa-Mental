@@ -9,6 +9,26 @@
     font-family: "Segoe UI", century-gothic, sans-serif;
     color: $font;
 }
+
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 ::selection {
     background: $selection-bg;
 }
@@ -28,24 +48,6 @@
             background-color: $scrollbar-thumb-bg-hover;
         }
     }
-}
-
-html {
-    min-height: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
-    min-height: 100%;
-}
-
-a {
-    text-decoration: none;
-    user-select: none;
-}
-
-a:hover {
-    cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {

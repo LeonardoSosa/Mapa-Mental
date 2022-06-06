@@ -1,0 +1,29 @@
+@use "../_colors.scss" as *;
+
+.main__navigation {
+    display: none;
+
+    max-height: 100vh;
+    padding: 2rem;
+
+    position: sticky;
+    top: 0;
+    overflow: auto;
+
+    //! TEMPORAL
+    background-color: $header;
+}
+
+.navigation {
+
+    &__title {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    &__items > * {
+        display: block;
+        padding-block: .6rem;
+        line-height: 1.1;
+    }
+}

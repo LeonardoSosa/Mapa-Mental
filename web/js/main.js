@@ -1,35 +1,26 @@
-//! Deprecated (old method)
-//// const nav = document.getElementById('sidebar__items')
-
-//// nav.addEventListener('click', (e) => {
-////     if(!e.target && e.target.tagName !== 'A') return
-
-////     let current = document.getElementsByClassName("nav-active")
-////     if(!current.length == 0){
-////         current[0].classList.remove('nav-active')
-////     }
-////     e.target.classList.add('nav-active')
-//// })zz
-
 const sectionsList = document.querySelectorAll(".section")
 const anchorsList = document.querySelectorAll(".sidebar__items > a")
+let lastCurrent
+
+// On load page
+updateSidebar()
+
 
 window.onscroll = (e) => {
-    updateAsideNav()
+    updateSidebar()
 }
 
-function updateAsideNav() {
-    const lastCurrent = document.querySelector("[aria-current=true]")
-    
+function updateSidebar() {
+    // Anchors and sections that are linked have the same index
+
     for (let i = 0; i < sectionsList.length; i++) {
-    
-        if(sectionInView(sectionsList[i])){
-            if(lastCurrent === anchorsList[i]) return
-    
-            anchorsList[i].setAttribute("aria-current", true)
-            if(lastCurrent !== null) lastCurrent.removeAttribute("aria-current")
-            return
-        }
+        if(!sectionInView(sectionsList[i])) continue
+        if(lastCurrent === i) return
+
+        anchorsList[i].setAttribute("aria-current", true)
+        if(lastCurrent !== undefined) anchorsList[lastCurrent].removeAttribute("aria-current")
+        lastCurrent = i
+        return
     }
     
     // If there isn't any valid section in the current view
@@ -38,8 +29,8 @@ function updateAsideNav() {
     })
 }
 
-function sectionInView (element) {
-    const sectionMargin = parseInt(getComputedStyle(document.querySelector(".section")).marginBottom)
+function sectionInView(element) {
+    const sectionMargin = parseInt(getComputedStyle(document.querySelector(".section")).marginTop)
     const cords = element.getBoundingClientRect()
 
     if(cords.top <= 1+sectionMargin && cords.bottom >= 0){

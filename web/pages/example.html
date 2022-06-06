@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Mental - Example</title>
+
+    <!-- Meta tags -->
+    <meta name="theme-color" content="#282829">
+
+    <!-- Css / Javascript -->
+    <link rel="stylesheet" href="../sass/css/content_pages.css">
+    <script src="../js/main.js" defer></script>
+
+    <!-- Source Code Pro Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Code+Pro&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <main class="main" id="main">
+        <a class="to-top" href="#main"><ion-icon name="arrow-up-outline"></ion-icon></a>
+        <div class="main__content">
+
+            <section class="section" id="historia">
+                <h2 class="section__title section__title--underline">Historia</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis accusamus tempora, eum perspiciatis autem velit accusantium fugiat molestias eaque veritatis minima ullam quidem non laboriosam impedit amet expedita numquam excepturi modi quod! Asperiores ab minus laboriosam similique optio vitae qui. Quis neque ducimus et. Inventore accusamus eligendi officiis blanditiis? Ipsa.
+                </p>
+            </section>
+
+            <section class="section" id="sintaxis">
+                <h2 class="section__title">Sintaxis</h2>
+                <pre class="code-block">
+                    <code class="code-block__text">
+{
+    "name": "eugenia",
+    "password": "12345678",
+    "adress": {
+        "city": "London",
+        "street": "Baker Street 123"
+    },
+    "hobbies": ["run", "code", "eat"],
+    "age": 27
+}
+                    </code>
+                </pre>
+            </section>
+
+            <section class="section" id="ejemplos">
+                <h2 class="section__title">Ejemplos</h2>
+                <div class="table">
+                    <div class="table__row">
+                        <p class="font">Lorem ipsum dolor sit amet.</p>
+                        <p class="font-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nesciunt?</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font-muted">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        <p class="font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, quisquam.</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font">Lorem ipsum dolor sit amet.</p>
+                        <p class="font-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, nesciunt?</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font-muted">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+                        <p class="font">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, quisquam.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="caracteristicas">
+                <h2 class="section__title">Características</h2>
+                <div class="table">
+                    <div class="table__row">
+                        <p class="font">g</p>
+                        <p class="font-muted">global</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font-muted">i</p>
+                        <p class="font">case insensitive</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font">m</p>
+                        <p class="font-muted">multiline</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font-muted">s</p>
+                        <p class="font">single line	???allows . to match newline characters???</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font">u</p>
+                        <p class="font-muted">unicode</p>
+                    </div>
+                    <div class="table__row">
+                        <p class="font-muted">y</p>
+                        <p class="font">sticky</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="consideraciones">
+                <h2 class="section__title section__title--underline">Consideraciones</h2>
+                <ul>
+                    <li><strong>{ }</strong> para definir objetos</li>
+                    <li><strong>[ ]</strong> para definir arrays</li>
+                    <li><strong>" "</strong> para definir una 'key' (obligatorio)</li>
+                    <li><strong>,</strong> para separar datos, a excepción del último elemento</li>
+                    <li><strong>.json</strong> extensión de archivo</li>
+                </ul>
+            </section>
+
+            <section class="section" id="bibliografia">
+                <h2 class="section__title section__title--underline">Bibliografía</h2>
+                <!-- <h3>Links</h3> -->
+                <p>Markdown Crash Course <a target="_blank" href="https://youtu.be/HUBNt18RFbo">https://youtu.be/HUBNt18RFbo</a></p>
+                <p>Javascript Dom Selector Methods <a target="_blank" href="https://youtu.be/v7rSSy8CaYE">https://youtu.be/v7rSSy8CaYE</a></p>
+                <p>Markdown Crash Course <a target="_blank" href="https://youtu.be/HUBNt18RFbo">https://youtu.be/HUBNt18RFbo</a></p>
+                <p>Javascript Dom Selector Methods <a target="_blank" href="https://youtu.be/v7rSSy8CaYE">https://youtu.be/v7rSSy8CaYE</a></p>
+            </section>
+            
+            <div class="div-blue">
+                <p class="font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, officia! <span><a>View More</a></span></p>
+            </div>
+
+        </div>
+
+        <aside class="main__navigation">
+            <nav class="navigation">
+
+                <h3 class="navigation__title">Temas</h3>
+                <div class="navigation__items">
+                    <!-- Each page/theme/topic has to be here -->
+                    <a class="a--font-muted" href="../index.html">Home</a>
+                    <a class="a--font-muted">Specificity</a>
+                    <a class="a--font-muted">BEM</a>
+                    <a class="a--font-muted">Flex shorthand</a>
+                    <a class="a--font-muted">DOM selector methods</a>
+                    <a class="a--font-muted">Callbacks</a>
+                    <a class="a--font-muted">Var | const | let</a>
+                    <a class="a--font-muted">\r | \n | \r\n</a>
+                    <a class="a--font-muted">JSON</a>
+                    <a class="a--font-muted">Markdown</a>
+                    <a class="a--font-muted">Regex</a>
+                    <a class="a--font-muted">Example</a>
+                </div>
+
+            </nav>
+        </aside>
+
+        <aside class="main__sidebar">
+            <nav class="sidebar">
+
+                <h3>Sumario</h3>
+                <div class="sidebar__items">
+                    <a class="a--font-muted" href="#historia">Historia</a>
+                    <a class="a--font-muted" href="#sintaxis">Sintaxis</a>
+                    <a class="a--font-muted" href="#ejemplos">Ejemplos</a>
+                    <a class="a--font-muted" href="#caracteristicas">Características</a>
+                    <a class="a--font-muted" href="#consideraciones">Consideraciones</a>
+                    <a class="a--font-muted" href="#bibliografia">Bibliografía</a>
+                </div>
+
+            </nav>
+        </aside>
+        
+    </main>
+
+    <!-- IonIcons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

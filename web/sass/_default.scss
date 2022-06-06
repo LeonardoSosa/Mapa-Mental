@@ -13,6 +13,20 @@
     color: $font-high-contrast;
 }
 
+//! Strong tag
+li {
+    list-style-position: inside;
+    line-height: 1.9;
+}
+
+strong {
+    background-color: $strong-bg;
+
+    padding: .2rem;
+    padding-top: .08rem;
+    border-radius: .3rem;
+}
+
 //! Anchor tag
 a {
     color: $anchor;
@@ -34,7 +48,9 @@ a {
 
 //! Div | Table
 %div-default {
-    padding: 1rem;
+    & > * {
+        padding: 1rem;
+    }
 
     border: 1px solid $div-border;
 }
@@ -51,19 +67,30 @@ a {
     &__row {
         @extend %div-default;
         border-bottom: 0px;
-        
-        &:first-child {
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
+        display: flex;
+
+        // Childs from .table__row
+        & >:first-child{
+            flex: 1 1 30%;
+            border-right: 1px solid $div-border;
         }
-    
-        &:last-child {
-            border-bottom: 1px solid $div-border;
-            border-bottom-left-radius: 0.5rem;
-            border-bottom-right-radius: 0.5rem;
+        & >:last-child{
+            flex: 1 1 70%;
         }
     }
 
+    // Childs that are .table__row
+    &__row:first-child {
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+    }
+    &__row:last-child {
+        border-bottom: 1px solid $div-border;
+        border-bottom-left-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+
+    // Childs from .table (.table__row)
     & >:nth-child(odd) {
         background-color: $div-bg-light;
     }
@@ -71,6 +98,19 @@ a {
         background-color: $div-bg-dark;
     }
 
+}
+
+//! Code block
+.code-block {
+    background-color: $header;
+    padding: 2rem;
+    
+    border: 1px solid $div-border;
+    border-radius: .3rem;
+
+    &__text {
+        font-family: 'Source Code Pro', monospace;
+    }
 }
 
 //! Buttons
@@ -88,13 +128,13 @@ a {
     transition: 80ms cubic-bezier(0.33, 1, 0.68, 1);
 }
 
-@mixin button-color($bg, $font, $btn-border, $bg-hover, $btn-border-hover) {
+@mixin button-color($bg, $font, $btn-border, $bg-hover, $border-hover) {
     background-color: $bg;
     color: $font;
     border-color: $btn-border;
     &:hover {
         background-color: $bg-hover;
-        border-color: $btn-border-hover;
+        border-color: $border-hover;
         text-decoration: none;
     }
 }
@@ -107,6 +147,35 @@ a {
 .button-green {
     @extend %button-default;
     @include button-color($button-bg-green, $font-high-contrast, $button-border-green, $button-bg-hover-green, $button-border-hover-green);
+}
+
+.to-top {
+    background-color: $header;
+    border-radius: 50%;
+    border: 1px solid $button-border;
+
+    &:hover {
+        background-color: $button-bg-hover;
+        border-color: $button-border-hover;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 10;
+
+    width: 3rem;
+    height: 3rem;
+
+    & ion-icon{
+        font-size: 2rem;
+        position: relative;
+        top: 0px;
+    }
 }
 
 //! Input

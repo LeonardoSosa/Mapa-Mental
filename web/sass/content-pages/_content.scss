@@ -1,0 +1,36 @@
+@use "../_colors.scss" as *;
+
+.main__content {
+    padding: 2rem 3rem;
+    padding-top: 0;
+
+    max-width: 950px;
+    margin-inline: auto;
+
+    & > * {
+        margin-top: 3rem;
+    }
+    // Para que haya suficiente espacio y se puedan ver los links de aside nav
+    & > *:last-child {
+        margin-bottom: 100vh;
+    }
+}
+
+.section {
+    &__title {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.2rem;
+    }
+    &__title--underline {
+        border-bottom: 1px solid $input-border;
+    }
+    
+    & > p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+
+        margin-bottom: .7rem;
+
+        // display: inline-block;
+    }
+}
